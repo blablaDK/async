@@ -31,11 +31,11 @@ function sendRequest(url) {
     return fetch(url)
         .then(res => {
             if (!res.ok) {
-                throw new Error('Request was failed');
+                alert(`Fail status ${response.status}`);
             }
             return res.json();
         })
-        .catch(() => { throw new Error('Network error'); });
+        .catch(() => { alert('Request was failed') });
 }
 
 
